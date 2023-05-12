@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ring : MonoBehaviour
+public class OnTriggerLineDraw : MonoBehaviour
 {
-    public  Transform targetRing;
-
+    
 }

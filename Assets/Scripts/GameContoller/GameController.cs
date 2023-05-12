@@ -9,6 +9,14 @@ public class GameController : MonoBehaviour
     public GameObject player;
     bool IsMove = false;
     public float speedPlayer = 3f;
+    LineRenderer line;
+    
+
+    private void Start()
+    {
+        line = GetComponent<LineRenderer>();
+    }
+
 
     public static GameController inst;
 
@@ -33,7 +41,7 @@ public class GameController : MonoBehaviour
             {
               IsMove = true;
                 Vector3 dir = target.position - player.transform.position;
-                float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg -90f ;
+                float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg -90f;
                 player.transform.eulerAngles = Vector3.forward * angle;
             }
         }
@@ -41,14 +49,16 @@ public class GameController : MonoBehaviour
         if (IsMove == true)
         {
             player.transform.position = Vector2.MoveTowards(player.transform.position, target.position, speedPlayer * Time.deltaTime);
+            
+
         }
 
-        if(player.transform.position == target.position)
+        if (player.transform.position == target.position)
         {
             player.transform.rotation = target.rotation;
             IsMove = false;
             target = target.GetComponent<Ring>().targetRing.GetComponent<Transform>();
         }
-
     }
+    
 }
