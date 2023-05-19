@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SplashScreen.unity
     guid: e0934af0494894483965956d49161d0d
+  - enabled: 1
+    path: Assets/Scenes/OrbiaGame.unity
+    guid: ed0c25e68e27c4c99a8f3f87d68ab7ba
   m_configObjects: {}

@@ -17,8 +17,6 @@ public class ScreenManager : BaseScreen
 
     public void ShowNextScreen(ScreenType screen)
     {
-     
-
         PreviousScreen = CurrentScreen;
         CurrentScreen = ScreenList[(int)screen];
         PreviousScreen.HideScreen();
